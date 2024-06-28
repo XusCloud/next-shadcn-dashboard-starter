@@ -1,3 +1,5 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import Providers from '@/components/layout/providers';
 import { Toaster } from '@/components/ui/toaster';
 import '@uploadthing/react/styles.css';
@@ -27,6 +29,8 @@ export default async function RootLayout({
         <Providers session={session}>
           <Toaster />
           {children}
+          <SpeedInsights />
+          <Analytics />
         </Providers>
       </body>
     </html>
